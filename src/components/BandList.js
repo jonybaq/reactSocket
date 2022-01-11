@@ -10,7 +10,7 @@ export const BandList = () => {
             //console.log(datos);
             setlista(datos);
           });
-          return socket.off('current-bands');
+          return ()=>socket.off('current-bands');
     }, [socket]);
     const handlChange=(event,key)=>{
         const newName=event.target.value;
