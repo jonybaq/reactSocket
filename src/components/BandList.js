@@ -55,7 +55,7 @@ export const BandList = () => {
     }
     return (
         <>
-            <table className="table table-striped">
+            <table class="table table-sm" >
                 <thead>
                     <tr>
                         <th></th>

@@ -1,15 +1,16 @@
 import { BandAdd } from "../components/BandAdd";
 import { BandList } from "../components/BandList";
 
-import { useContext, useEffect, useState } from "react";
+import { useContext} from "react";
 import { SocketContext } from "../context/SocketContext";
+import { BandChart } from "../components/BandChart";
 
 function HomePage() {
   console.log(`Rederiza...`);
   const {online}=useContext(SocketContext);
   return (
     <div className="container">
-      <div className="alert">
+      <div >
          <p>
            Services status:  
            {
@@ -22,7 +23,14 @@ function HomePage() {
            
          </p>
       </div>
-      <h1>Anime Names</h1>
+      <h4>Anime Names</h4>
+      <div className="row">
+        <div className="col">
+        <BandChart/>
+        </div>
+      </div>
+      
+      
       <hr></hr>
       <div className="row">
         <div className="col-8">
